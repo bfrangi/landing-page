@@ -1,20 +1,16 @@
 /*
- *
- * CSS written based on SMACSS architecture.
- * To learn more, visit: http://smacss.com/
- * 
- * For simplicity, no reset or normalize is added. 
- * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
- *
+ * CSS written based on SMACSS architecture (http://smacss.com/).
 */
 
-/* ---- Base Rules ---- */
+/* ---------------------------------------------------------------- */
+/* -------------------------- Base Rules -------------------------- */
+/* ---------------------------------------------------------------- */
+
 body {
   background: rgb(250, 255, 255);
-  /* background: linear-gradient(0deg, rgb(191, 136, 203) 0%, rgba(0,13,60,1) 100%); */
-  margin: 0;
-  font-family: "Raleway", sans-serif;
   color: #000000;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
 }
 
 @media (max-width: 400px) {
@@ -23,82 +19,58 @@ body {
   }
 }
 
-/* Typeography General*/
+/* -------------------------- Typography -------------------------- */
+
 h1 {
   font-family: "Fira Sans", sans-serif;
   font-size: 3em;
 }
 
-/* @media only screen and (min-width: 35em){
-    h1 {
-        font-size: 7em;
-        margin: 2em 4rem 1em;
-    }
-}
-
-h2 {
-    border-bottom: 1px solid #cc1;
-    font-family: 'Oxygen', Sans-Serif;
-    font-size: 3em;
-    color: #fff;
-}
-
- */
-
 p {
   line-height: 1.6em;
 }
 
-/* ---- Layout Rules ---- */
+/* ---------------------------------------------------------------- */
+/* ------------------------- Layout Rules ------------------------- */
+/* ---------------------------------------------------------------- */
 
-/* main {
-  background-color: #a1d5ff;
-} */
+/* Medium sized screens (900px < width < 1400px) */
+section {
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-rows: 1fr;
+}
 
-/* @media (min-width: 1400px) {
-  main {
+/* Wide screens (> 1400px wide) */
+@media (min-width: 1400px) {
+  section {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr;
   }
 }
 
-@media (max-width: 1400px) and (min-width: 900px) {
-  main {
-    display: grid;
-    grid-template-columns: 1fr 7fr 1fr;
-    grid-template-rows: 1fr;
-  }
-}
-
+/* Small Screens (< 900px wide) */
 @media (max-width: 900px) {
-  main {
+  section {
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
     grid-template-rows: 1fr;
   }
-} */
-
-/* 
-
-.main-hero {
-    min-height: 40vh;
-    padding-top: 3em;
 }
 
-section {
-    position: relative;
-    min-height: 80vh;
-} */
+/* ---------------------------------------------------------------- */
+/* ------------------------- Module Rules ------------------------- */
+/* ---------------------------------------------------------------- */
 
-/* ---- Module Rules ---- */
+/* -------------------------- Nav Styles -------------------------- */
 
-/* Navigation Styles*/
 .navbar__menu ul {
   padding-left: 0;
   margin: 0;
   text-align: right;
 }
+
 .navbar__menu li {
   display: inline-block;
 }
@@ -111,18 +83,14 @@ section {
   color: #ffffff;
 }
 
-.navbar__menu .active-link {
-  background: #3487ca;
-}
-
 .navbar__menu .menu__link:hover {
   background: #333;
   color: #fff;
   transition: ease 0.3s all;
 }
-/* 
-*/
-/* Header Styles */
+
+/* ---------------------------- Header ---------------------------- */
+
 .page__header {
   background: #4490cf;
   position: fixed;
@@ -131,7 +99,9 @@ section {
   z-index: 5;
 }
 
-/* Footer Styles */
+/* ------------------------ Footer Styles ------------------------- */
+
+/* For small screens */
 .page__footer {
   background: #333;
   padding: 2em;
@@ -140,6 +110,7 @@ section {
   color: #fff;
 }
 
+/* For medium and large screens */
 @media (min-width: 900px) and (min-height: 740px) {
   .page__footer {
     padding-top: 12em;
@@ -147,167 +118,31 @@ section {
   }
 }
 
-/* ---- Theme Rules ---- */
-/* Landing Container Styles */
-.landing__container {
-  padding: 1em;
-  text-align: left;
-}
-/* 
-@media only screen and (min-width: 35em){
-    .landing__container {
-        max-width: 50em;
-        padding: 4em;
-    }
-}
+/* ---------------------------------------------------------------- */
+/* ------------------------- Theme Rules -------------------------- */
+/* ---------------------------------------------------------------- */
 
-section:nth-of-type(even) .landing__container {
-    margin-right: 0;
-    margin-left: auto;
-    text-align: right; 
-} */
+/* --------------------- Section link Styles ---------------------- */
 
-/* Background Circles */
-/* Note that background circles are created with psuedo elements before and after */
-/* Circles appear to be random do to use of :nth-of-type psuedo class */
-/* section:nth-of-type(odd) .landing__container::before {
-    content: '';
-    background: rgba(255, 255, 255, 0.187);
-    position: absolute;
-    z-index: -5;
-    width: 20vh;
-    height: 20vh;
-    border-radius: 50%;
-    opacity: 0;
-    transition: ease 0.5s all;
+section .section_link {
+  text-decoration: none;
+  color: #53a8ed;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-section:nth-of-type(even) .landing__container::before {
-    content: '';
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
-    position: absolute;
-    top: 3em;
-    right: 3em;
-    z-index: -5;
-    width: 10vh;
-    height: 10vh;
-    border-radius: 50%;
-    opacity: 0;
-    transition: ease 0.5s all;
-}
+/* ------------------- Landing Container Styles ------------------- */
 
-section:nth-of-type(3n) .landing__container::after {
-    content: '';
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -5;
-    width: 10vh;
-    height: 10vh;
-    border-radius: 50%;
-    opacity: 0;
-    transition: ease 0.5s all;
-}
-
-section:nth-of-type(3n + 1) .landing__container::after {
-    content: '';
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
-    position: absolute;
-    right: 20vw;
-    bottom: -5em;
-    z-index: -5;
-    width: 15vh;
-    height: 15vh;
-    border-radius: 50%;
-    opacity: 0;
-    transition: ease 0.5s all;
-} */
-
-/* ---- Theme State Rules ---- */
-/* Section Active Styles */
-
-section.active-section {
-  background: rgb(234, 249, 255);
-}
-/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-/* 
-
-section.active-section .landing__container::before {
-    opacity: 1;
-    animation: rotate 4s linear 0s infinite forwards;
-}
-
-section.active-section .landing__container::after {
-    opacity: 1;
-    animation: rotate 5s linear 0s infinite forwards reverse;
-} */
-
-/* Section Active Styles Keyframe Animations */
-/* @keyframes rotate {
-	from {
-		transform: rotate(0deg)
-		           translate(-1em)
-		           rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg)
-		           translate(-1em) 
-		           rotate(-360deg);
-	}
-} */
-
-/* @media only screen and (min-width: 35em){
-    h1 {
-        font-size: 7em;
-        margin: 2em 4rem 1em;
-    }
-} */
-
-/* section {
-  grid-column: 2;
-} */
-
+/* All screen sizes */
 section .landing__container {
   grid-column: 2;
   margin-bottom: 50px;
   margin-top: 50px;
+  padding: 1em;
+  text-align: left;
 }
 
-@media (min-width: 900px) and (min-height: 900px) {
-  section .landing__container {
-    margin-bottom: 250px;
-    margin-top: 250px;
-  }
-}
-
-@media (min-width: 1400px) {
-  section {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr;
-  }
-}
-
-@media (max-width: 1400px) and (min-width: 900px) {
-  section {
-    display: grid;
-    grid-template-columns: 1fr 7fr 1fr;
-    grid-template-rows: 1fr;
-  }
-}
-
-@media (max-width: 900px) {
-  section {
-    display: grid;
-    grid-template-columns: 1fr 10fr 1fr;
-    grid-template-rows: 1fr;
-  }
-}
-
+/* Wide screens (> 900px wide) */
 @media (min-width: 900px) {
   section .landing__container {
     display: grid;
@@ -341,7 +176,14 @@ section .landing__container {
     grid-column: 1;
   }
 }
+@media (min-width: 900px) and (min-height: 900px) {
+  section .landing__container {
+    margin-bottom: 250px;
+    margin-top: 250px;
+  }
+}
 
+/* Small Screens (< 900px wide) */
 @media (max-width: 900px) {
   section .landing__container {
     display: grid;
@@ -365,9 +207,18 @@ section .landing__container {
   }
 }
 
-section .section_link {
-  text-decoration: none;
-  color: #53a8ed;
-  font-weight: 700;
-  cursor: pointer;
+/* ---------------------------------------------------------------- */
+/* ---------------------- Theme State Rules ----------------------- */
+/* ---------------------------------------------------------------- */
+
+/* -------------------- Section Active Styles --------------------- */
+
+section.active-section {
+  background: rgb(234, 249, 255);
+}
+
+/* ---------------------- Link Active Styles ---------------------- */
+
+.navbar__menu .active-link {
+  background: #3487ca;
 }
