@@ -1,5 +1,7 @@
 # Landing Page
 
+View the landing page [here](https://bfrangi.github.io/landing-page/).
+
 ## Table of Contents
 
 - [Landing Page](#landing-page)
