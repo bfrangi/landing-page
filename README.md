@@ -1,6 +1,6 @@
 # Landing Page
 
-View the landing page [here](https://bfrangi.github.io/landing-page/).
+View the landing page [here](https://bfrangi.github.io/landing-page/). This project is based on [this](https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page) udacity project.
 
 ## Table of Contents
 
