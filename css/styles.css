@@ -17,6 +17,12 @@ body {
   color: #000000;
 }
 
+@media (max-width: 400px) {
+  body {
+    font-size: 0.8em;
+  }
+}
+
 /* Typeography General*/
 h1 {
   font-family: "Fira Sans", sans-serif;
@@ -128,8 +134,17 @@ section {
 /* Footer Styles */
 .page__footer {
   background: #333;
-  padding: 12em;
+  padding: 2em;
+  padding-top: 3em;
+  padding-bottom: 3em;
   color: #fff;
+}
+
+@media (min-width: 900px) and (min-height: 740px) {
+  .page__footer {
+    padding-top: 12em;
+    padding-bottom: 12em;
+  }
 }
 
 /* ---- Theme Rules ---- */
@@ -258,9 +273,17 @@ section.active-section .landing__container::after {
 
 section .landing__container {
   grid-column: 2;
-  margin-bottom: 300px;
-  margin-top: 300px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
+
+@media (min-width: 900px) and (min-height: 900px) {
+  section .landing__container {
+    margin-bottom: 250px;
+    margin-top: 250px;
+  }
+}
+
 @media (min-width: 1400px) {
   section {
     display: grid;
@@ -295,7 +318,6 @@ section .landing__container {
   }
   section .landing__container .section__image {
     width: 70%;
-    border-radius: 20px;
     grid-row: 1;
   }
 
@@ -324,21 +346,28 @@ section .landing__container {
   section .landing__container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     justify-items: center;
     align-items: center;
     margin-bottom: 100px;
   }
 
   section .landing__container .section__image {
-    width: 70%;
-    border-radius: 20px;
+    width: 100%;
     grid-row: 2;
     grid-column: 1;
+    margin-top: 50px;
   }
 
   section .landing__container .section_text__container {
     grid-row: 1;
     grid-column: 1;
   }
+}
+
+section .section_link {
+  text-decoration: none;
+  color: #53a8ed;
+  font-weight: 700;
+  cursor: pointer;
 }
