@@ -1,9 +1,6 @@
 /**
- *
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
+ * Programmatically builds navigation scrolls to anchors from
+ * navigation, and highlights section in viewport upon scrolling.
  *
  * Dependencies: None
  *
@@ -11,11 +8,6 @@
  *
  * JS Standard: ESlint
  *
- */
-
-/**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
  */
 
 /**
@@ -28,36 +20,35 @@ const navList = document.getElementById("navbar__list");
 
 /**
  * End Global Variables
- * Start Helper Functions
- *
- */
-
-/**
- * End Helper Functions
  * Begin Main Functions
  *
  */
 
-// Build the navbar by populating it with <li>. We use a document 
+// Build the navbar by populating it with <li>. We use a document
 // fragment to avoid reflowing the page for each <li> added to the <ul>
 document.addEventListener("DOMContentLoaded", function () {
   const navItems = document.createDocumentFragment();
+  // Iterate along the sections and add the link to the document fragment
   for (let i = 0; i < sections.length; i++) {
     let listItem = document.createElement("li");
     listItem.innerHTML = `<a href="#${sections[i].id}" class="menu__link">${sections[i].dataset.nav}</a>`;
     navItems.appendChild(listItem);
   }
+  // Add the document fragment to the DOM and set the first nav item to active
   navList.appendChild(navItems);
-  navList.querySelectorAll('a')[0].classList.add("active-link");
+  navList.querySelectorAll("a")[0].classList.add("active-link");
 });
 
 // Add class 'active' to section when near top of viewport
 window.addEventListener("scroll", function () {
-  let navItems = navList.querySelectorAll('a');
+  let navItems = navList.querySelectorAll("a");
   for (let i = 0; i < sections.length; i++) {
+    // Get the section and it's position
     let section = sections[i];
     let navItem = navItems[i];
     let position = section.getBoundingClientRect();
+    // Check the position of the section and add the active class if 
+    // it is near the top of the viewport
     if (position.top <= 150 && position.bottom >= 150) {
       section.classList.add("active-section");
       navItem.classList.add("active-link");
@@ -70,10 +61,10 @@ window.addEventListener("scroll", function () {
 
 // Smooth scroll to anchor ID
 navList.addEventListener("click", function (event) {
-    event.preventDefault();
-    const clicked = event.target;
-    const section = document.querySelector(clicked.hash);
-    section.scrollIntoView({ behavior: "smooth" });
+  event.preventDefault();
+  const clicked = event.target;
+  const section = document.querySelector(clicked.hash);
+  section.scrollIntoView({ behavior: "smooth" });
 });
 
 /**
