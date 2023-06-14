@@ -1,15 +1,30 @@
-# Landing Page Project
+# Landing Page
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+- [Landing Page](#landing-page)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contribute](#contribute)
+  - [License](#license)
 
-## Instructions
+## Installation
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+To use this project, simply clone the repository after navigating to the desired directory:
 
-To get started, open `js/app.js` and start building out the app's functionality
+```
+git clone https://github.com/bfrangi/landing-page.git
+```
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+## Usage
 
-Bike1: https://www.google.com/url?sa=i&url=https%3A%2F%2Fridelines.co.uk%2Fproduct%2Fprivate-mountain-bike-tuition-half-day%2F&psig=AOvVaw1giugA13XyQm5rSmJRmxOX&ust=1686379940286000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMD7tfzMtf8CFQAAAAAdAAAAABAG  https://images.immediate.co.uk/production/volatile/sites/21/2022/09/Cervelo-Soloist-road-bike-review-19-e8ab504.jpg?quality=90&resize=620%2C413  
+To use this project after installation, simply open `index.html` in a browser.
+
+## Contribute
+
+Feel free to contribute by submitting a pull requests.
+
+## License
+
+This project is hosted under the [MIT License](https://github.com/bfrangi/landing-page/blob/main/LICENSE).
