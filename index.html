@@ -1,118 +1,135 @@
 <!DOCTYPE >
+<!-- HTML Follows BEM naming conventions -->
 <html lang="en">
   <head>
+    <!-- Start Metadata -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>DeveloCamp</title>
-    <!-- Load Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Load Styles -->
+    <title>Lyricus</title>
+    <!-- End Metadata -->
+
+    <!-- Start Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <!-- End Google Fonts -->
+
+    <!-- Start Custom CSS -->
     <link href="css/styles.css" rel="stylesheet" />
+    <!-- End Custom CSS -->
   </head>
+
   <body>
-    <!-- HTML Follows BEM naming conventions 
-  IDs are only used for sections to connect menu achors to sections -->
+    <!-- Start Navigation -->
     <header class="page__header">
       <nav class="navbar__menu">
         <!-- Navigation starts as empty UL that is populated with JS -->
         <ul id="navbar__list"></ul>
       </nav>
     </header>
+    <!-- End Navigation -->
 
+    <!-- Start Main Content -->
     <main>
-      <header class="main__hero">
-        <h1>LifeCycle</h1>
-      </header>
-      <!-- Each Section has an ID (used for the anchor) and 
-    a data attribute that will populate the li node.
-    Adding more sections will automatically populate nav.
-    The first section is set to active class by default -->
-      <section id="section1" data-nav="Section 1" class="your-active-class">
+      <!-- <header class="main__hero">
+        <h1>Lyricus</h1>
+      </header> -->
+      <section id="home" data-nav="Home" class="active-section">
         <div class="landing__container">
-          <h2>Section 1</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
-          </p>
-
-          <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
-          </p>
+          <div class="section_text__container">
+            <h1>Unlock your full potential. Try Lyricus.</h1>
+            <p>
+              Welcome to Lyricus, the premier platform for online learning and
+              coding courses. Dive into the exciting world of technology and
+              programming right from the comfort of your home. Whether you're a
+              novice looking to explore the fundamentals or a seasoned developer
+              seeking advanced techniques, our comprehensive collection of
+              coding courses has got you covered. Join our dynamic community of
+              learners and unlock your coding potential with Lyricus!
+            </p>
+          </div>
+          <img src="images/svg/home.svg" alt="Courses" class="section__image" />
         </div>
       </section>
-      <section id="section2" data-nav="Section 2">
-        <div class="landing__container">
-          <h2>Section 2</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
-          </p>
 
-          <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
-          </p>
+      <section id="learn" data-nav="Learn">
+        <div class="landing__container">
+          <div class="section_text__container">
+            <h2>Learn</h2>
+            <p>
+              Embark on an exhilarating coding journey with Lyricus Learn. Our
+              Learn section offers a diverse selection of tech-focused courses
+              designed to enhance your programming skills. From front-end web
+              development to data science and cybersecurity, our courses provide
+              in-depth knowledge and hands-on projects to sharpen your coding
+              prowess. Engage in interactive lessons, collaborate with fellow
+              learners, and master the latest tools and frameworks. With Lyricus
+              Learn, your coding aspirations become a reality.
+            </p>
+          </div>
+          <!-- <img
+            src="images/lyricus-learn.png"
+            alt="Courses"
+            class="section__image"
+          /> -->
+          <img src="images/svg/learn.svg" alt="Courses" class="section__image" />
         </div>
       </section>
-      <section id="section3" data-nav="Section 3">
-        <div class="landing__container">
-          <h2>Section 3</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
-          </p>
 
-          <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
-          </p>
+      <section id="teach" data-nav="Teach">
+        <div class="landing__container">
+          <div class="section_text__container">
+            <h2>Teach</h2>
+            <p>
+              Inspire the next generation of programmers by becoming a coding
+              instructor on Lyricus Teach. As a passionate tech expert, you can
+              share your knowledge and expertise with aspiring coders around the
+              world. Create captivating courses using our user-friendly tools,
+              deliver engaging lessons, and provide personalized guidance to
+              your students. Whether you specialize in full-stack development,
+              mobile app creation, or machine learning, Lyricus Teach empowers
+              you to shape the future of coding education.
+            </p>
+          </div>
+          <!-- <img
+            src="images/lyricus-teach.png"
+            alt="Courses"
+            class="section__image"
+          /> -->
+          <img src="images/svg/teach.svg" alt="Courses" class="section__image" />
+        </div>
+      </section>
+
+      <section id="pricing" data-nav="Pricing">
+        <div class="landing__container">
+          <div class="section_text__container">
+            <h2>Pricing</h2>
+            <p>
+              Gain unlimited access to our extensive range of tech courses
+              without straining your budget. Our affordable pricing plans are
+              tailored to fit every learner's needs, making quality coding
+              education accessible to all. Whether you're a hobbyist or a
+              professional, our plans ensure you can expand your coding skills
+              without financial barriers. Experience the true value of tech
+              education with Lyricus and unlock a world of coding opportunities.
+            </p>
+          </div>
+          <img src="images/svg/pricing.svg" alt="Courses" class="section__image" />
+          <!-- <img src="images/pricing-happy.png" alt="Courses" class="section__image" /> -->
         </div>
       </section>
     </main>
+    <!-- End Main Content -->
+
+    <!-- Start Footer -->
     <footer class="page__footer">
-      <p>&copy Udacity</p>
+      <p>&copy Lyricus</p>
     </footer>
-    <script src="js/index.html"></script>
+    <!-- End Footer -->
+
+    <!-- Start Load Scripts -->
+    <script src="js/app.js"></script>
+    <!-- End Load Scripts -->
   </body>
 </html>

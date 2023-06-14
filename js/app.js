@@ -48,17 +48,22 @@ document.addEventListener("DOMContentLoaded", function () {
     navItems.appendChild(listItem);
   }
   navList.appendChild(navItems);
+  navList.querySelectorAll('a')[0].classList.add("active-link");
 });
 
 // Add class 'active' to section when near top of viewport
 window.addEventListener("scroll", function () {
+  let navItems = navList.querySelectorAll('a');
   for (let i = 0; i < sections.length; i++) {
     let section = sections[i];
+    let navItem = navItems[i];
     let position = section.getBoundingClientRect();
     if (position.top <= 150 && position.bottom >= 150) {
       section.classList.add("active-section");
+      navItem.classList.add("active-link");
     } else {
       section.classList.remove("active-section");
+      navItem.classList.remove("active-link");
     }
   }
 });
